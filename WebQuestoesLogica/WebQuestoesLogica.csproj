@@ -148,9 +148,33 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Questao10Controller.cs" />
+    <Compile Include="Controllers\Questao11Controller.cs" />
+    <Compile Include="Controllers\Questao12Controller.cs" />
+    <Compile Include="Controllers\Questao9Controller.cs" />
+    <Compile Include="Controllers\Questao8Controller.cs" />
+    <Compile Include="Controllers\Questao7Controller.cs" />
+    <Compile Include="Controllers\Questao6Controller.cs" />
+    <Compile Include="Controllers\Questao5Controller.cs" />
+    <Compile Include="Controllers\Questao4Controller.cs" />
+    <Compile Include="Controllers\Questao3Controller.cs" />
+    <Compile Include="Controllers\Questao2Controller.cs" />
+    <Compile Include="Controllers\Questao1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Questao10Model.cs" />
+    <Compile Include="Models\Questao11Model.cs" />
+    <Compile Include="Models\Questao12Model .cs" />
+    <Compile Include="Models\Questao9Model.cs" />
+    <Compile Include="Models\Questao8Model.cs" />
+    <Compile Include="Models\Questao7Model.cs" />
+    <Compile Include="Models\Questao6Model.cs" />
+    <Compile Include="Models\Questao5Model.cs" />
+    <Compile Include="Models\Questao4Model.cs" />
+    <Compile Include="Models\Questao3Model.cs" />
+    <Compile Include="Models\Questao2Model.cs" />
+    <Compile Include="Models\Questao1Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -189,13 +213,23 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Questao1\Index.cshtml" />
+    <Content Include="Views\Questao2\Index.cshtml" />
+    <Content Include="Views\Questao3\Index.cshtml" />
+    <Content Include="Views\Questao4\Index.cshtml" />
+    <Content Include="Views\Questao5\Index.cshtml" />
+    <Content Include="Views\Questao6\Index.cshtml" />
+    <Content Include="Views\Questao7\Index.cshtml" />
+    <Content Include="Views\Questao8\Index.cshtml" />
+    <Content Include="Views\Questao9\Index.cshtml" />
+    <Content Include="Views\Questao10\Index.cshtml" />
+    <Content Include="Views\Questao11\Index.cshtml" />
+    <Content Include="Views\Questao12\Index.cshtml" />
+    <Content Include="Views\Questao12\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

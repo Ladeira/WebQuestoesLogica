@@ -1,0 +1,60 @@
+﻿@model WebQuestoesLogica.Models.Questao8Model
+
+@{
+    ViewBag.Title = "Questão 8";
+}
+
+<h2>Questão 8</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Entrar com três números e imprimi-los em ordem decrescente</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">Número 1</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Numero1, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Numero1, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Número 2</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Numero2, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Numero2, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Número 3</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Numero3, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Numero3, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Resposta" class="btn btn-default" />
+        </div>
+    </div>
+
+    @if (Model != null && Model.Ordem != "")
+    {
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <label class="text-left text-success">Resposta = @Html.DisplayFor(model => model.Ordem) </label>
+            </div>
+        </div>
+    }
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,44 @@
+﻿@model WebQuestoesLogica.Models.Questao2Model
+
+@{
+    ViewBag.Title = "Questão 2";
+}
+
+<h2>Questão 2</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Em época de pouco dinheiro, os comerciantes estão procurando aumentar suas vendas oferecendo desconto. Faça um algoritmo que possa entrar com o valor de um produto e imprima o novo valor tendo em vista que o desconto foi de 10%.</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2" for="nome">Valor</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Resposta" class="btn btn-default" />
+        </div>
+    </div>
+
+    @if (Model != null && Model.Desconto > 0)
+    {
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <label class="text-left text-success" for="nome">Resposta = @Html.DisplayFor(model => model.Desconto )</label>
+            </div>
+        </div>
+    }
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

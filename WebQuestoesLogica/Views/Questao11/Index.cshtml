@@ -1,0 +1,52 @@
+﻿@model WebQuestoesLogica.Models.Questao11Model
+
+@{
+    ViewBag.Title = "Questão 11";
+}
+
+<h2>Questão 11</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Crie uma tela com dois campos (Valor e Acréscimo) e um botão calcular que deverá chamar uma função passando estes por parâmetro, o retorno deverá ser o valor final já com o acréscimo</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2" for="nome">Valor</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2" for="nome">Acréscimo</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Acrescimo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Acrescimo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Calcular" class="btn btn-default" />
+        </div>
+    </div>
+
+    @if (Model != null && Model.Total > 0)
+    {
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <label class="text-left text-success" for="nome">Resposta = @Html.DisplayFor(model => model.Total)</label>
+            </div>
+        </div>
+    }
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
